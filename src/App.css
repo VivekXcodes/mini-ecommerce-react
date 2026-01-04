@@ -1,0 +1,220 @@
+/* 1. GLOBAL RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fcfcfc;
+  color: #333;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.title {
+  text-align: center;
+  font-family: serif; 
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+/* 2. FILTER BAR (Matches your original UI) */
+.filter-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 20px;
+  background-color: #fff;
+  border-bottom: 1px solid #f0f0f0;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.filter-bar input, 
+.filter-bar select {
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  outline: none;
+  font-size: 0.9rem;
+  min-width: 180px;
+}
+
+.clear-btn {
+  background-color: #94a3b8;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+/* 3. MAIN LAYOUT (Two-Column View) */
+.main-layout {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.products-section {
+  flex: 3; /* Product grid takes up 75% */
+}
+
+/* 4. PRODUCT GRID & CARDS */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.image-container {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.product-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+}
+
+/* STOCK BADGES */
+.stock-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  padding: 5px 10px;
+  font-size: 0.7rem;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.in-stock { background: #dcfce7; color: #166534; border: 1px solid #bcf0da; }
+.out-of-stock { background: #fee2e2; color: #991b1b; border: 1px solid #fecaca; }
+
+.price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #2563eb;
+  margin: 10px 0;
+}
+
+.add-btn {
+  background-color: #1a1a1a;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.add-btn:disabled {
+  background-color: #e2e8f0;
+  color: #94a3b8;
+  cursor: not-allowed;
+}
+
+/* 5. SIDEBAR CART */
+.cart-sidebar {
+  flex: 1; /* Cart takes up 25% */
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 20px;
+  border-radius: 12px;
+  position: sticky;
+  top: 20px;
+  min-width: 300px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: white;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid #f1f5f9;
+}
+
+.cart-item img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+}
+
+.qty-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 8px 0;
+}
+
+.qty-controls button {
+  width: 24px;
+  height: 24px;
+  border: 1px solid #cbd5e1;
+  background: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.delete-btn {
+  margin-left: auto;
+  background: none;
+  border: none;
+  color: #cbd5e1;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.delete-btn:hover { color: #ef4444; }
+
+.checkout-btn {
+  width: 100%;
+  background-color: #059669;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 15px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* 6. RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+  .main-layout {
+    flex-direction: column;
+  }
+  .cart-sidebar {
+    width: 100%;
+    position: static;
+  }
+}
