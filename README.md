@@ -1,16 +1,46 @@
-# React + Vite
+# 🛒 Mini E-Commerce Store
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fully functional, responsive React e-commerce application built with **Vite**. This project features real-time product fetching, dynamic filtering, a robust shopping cart with quantity management, and live stock status tracking.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
+**[View the Live Project Here](https://mini-ecommerce-react-kappa.vercel.app/)** 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## ✨ Key Features
+* **Dynamic Product Fetching**: Integrated with FakeStoreAPI to display real-time product data.
+* **Advanced Filtering**: Search by title, filter by category, and sort by price (High to Low / Low to High).
+* **Smart Shopping Cart**: 
+    * Add/Remove items.
+    * Real-time quantity controls (+ / -).
+    * Automatic total price calculation.
+* **Inventory Management**: Simulated stock status (In Stock vs. Out of Stock) with disabled purchase buttons for unavailable items.
+* **Responsive UI**: Optimized for mobile, tablet, and desktop viewing.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tech Stack
+* **Frontend**: React.js 19
+* **Build Tool**: Vite
+* **Styling**: Custom CSS3 (Flexbox & Grid)
+* **API**: FakeStoreAPI
+* **Deployment**: Vercel
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🏗️ Local Setup
+
+1.  **Clone the repository**:
+    ```bash
+    git clone [https://github.com/VivekXcodes/mini-ecommerce-react.git]
+    ```
+2.  **Navigate to folder**:
+    ```bash
+    cd myshop
+    ```
+3.  **Install dependencies**:
+    ```bash
+    npm install
+    ```
+4.  **Run the project**:
+    ```bash
+    npm run dev
+    ```
