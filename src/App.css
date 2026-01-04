@@ -24,7 +24,7 @@ body {
   margin-bottom: 20px;
 }
 
-/* 2. FILTER BAR (Matches your original UI) */
+/* 2. FILTER BAR */
 .filter-bar {
   display: flex;
   justify-content: center;
@@ -65,7 +65,7 @@ body {
 }
 
 .products-section {
-  flex: 3; /* Product grid takes up 75% */
+  flex: 3; 
 }
 
 /* 4. PRODUCT GRID & CARDS */
@@ -142,7 +142,7 @@ body {
 
 /* 5. SIDEBAR CART */
 .cart-sidebar {
-  flex: 1; /* Cart takes up 25% */
+  flex: 1;
   background: #f8fafc;
   border: 1px solid #e2e8f0;
   padding: 20px;
